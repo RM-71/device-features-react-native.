@@ -55,7 +55,13 @@
           "locationAlwaysAndWhenInUsePermission": "Travel Diary needs your location to record where your memories were made."
         }
       ],
-      "expo-notifications",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notif-icon.png",
+          "color": "#F59E0B"
+        }
+      ],
       [
         "expo-media-library",
         {

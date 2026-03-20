@@ -1,6 +1,6 @@
 import React, { useRef, useCallback } from 'react';
 import {
-  View, Text, FlatList, TouchableOpacity,
+  View, Text, FlatList, TouchableOpacity, Image,
   StatusBar, Animated, ListRenderItemInfo,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -19,6 +19,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import styles from '../styles/screens/HomeScreen.styles';
 
 type NavProp = StackNavigationProp<RootStackParamList, 'Home'>;
+const BRAND_ICON = require('../../assets/adaptive-icon.png');
 
 const HomeScreen: React.FC = () => {
   const navigation = useNavigation<NavProp>();
@@ -62,8 +63,8 @@ const HomeScreen: React.FC = () => {
       {/* ── Top bar ─────────────────────────────────────────────────────── */}
       <View style={[styles.topBar, { paddingTop: insets.top + 10, backgroundColor: colors.background }]}>
         <View style={styles.topLeft}>
-          <View style={[styles.logoMark, { backgroundColor: colors.accent }]}>
-            <Text style={styles.logoChar}>T</Text>
+          <View style={[styles.logoMark, { borderColor: colors.border }]}>
+            <Image source={BRAND_ICON} style={styles.logoImage} resizeMode="cover" />
           </View>
           <View>
             <Text style={[styles.appName, { color: colors.text }]}>Travelogue</Text>

@@ -19,7 +19,7 @@ const EmptyState: React.FC = () => {
 
     const loop = Animated.loop(
       Animated.sequence([
-        Animated.timing(float, { toValue: -14, duration: 2200, useNativeDriver: true }),
+        Animated.timing(float, { toValue: -8, duration: 2200, useNativeDriver: true }),
         Animated.timing(float, { toValue: 0, duration: 2200, useNativeDriver: true }),
       ])
     );
@@ -38,7 +38,7 @@ const EmptyState: React.FC = () => {
       </View>
 
       <Text style={[styles.headline, { color: colors.text }]}>
-        No Entries Yet
+        No Entries yet
       </Text>
       <Text style={[styles.body, { color: colors.textSecondary }]}>
         Every adventure starts with a single photo.{'\n'}Tap below to capture your first memory.

@@ -16,14 +16,16 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: RADIUS.md,
+    overflow: 'hidden',
+    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logoChar: { color: '#000', fontSize: 18, fontWeight: '900' },
+  logoImage: { width: '100%', height: '100%' },
   appName: { ...TYPOGRAPHY.titleMedium },
   appSub: { ...TYPOGRAPHY.labelMedium, marginTop: 1 },
 
-  heroSection: { paddingTop: SPACING.lg, paddingBottom: SPACING.sm },
+  heroSection: { paddingTop: SPACING.sm, paddingBottom: SPACING.sm },
   heroTitle: { ...TYPOGRAPHY.displayLarge },
   heroTitleAccent: { ...TYPOGRAPHY.displayLarge, marginTop: -8 },
 
